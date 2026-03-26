@@ -1,0 +1,95 @@
+
+---
+
+# 🌿 EcoSync: AI Urban Sustainability Platform – Project Prompt
+
+---
+
+## OBJECTIVE
+
+Generate a complete project documentation package for **EcoSync**, an AI-powered urban sustainability platform that optimizes energy, waste management, and green infrastructure using IoT sensors, satellite data, and machine learning.
+
+**Audience:** City officials, technical teams, investors
+
+---
+
+## SECTIONS TO INCLUDE
+
+### 1. Executive Summary
+- Problem, solution, differentiators
+- Key impact metrics (energy, cost, carbon)
+- 3-year roadmap summary
+- Investment estimate and ROI
+
+### 2. Technical Architecture
+- Hardware: IoT sensors (types, specs, cost, density)
+- Edge & network: Gateways, protocols (LoRaWAN, 5G)
+- Cloud: Data ingestion, databases (TimescaleDB, PostGIS), orchestration
+- Applications: City dashboard, mobile app, open API
+- Data flow (step-by-step)
+- Security: Encryption, access control, privacy, compliance
+
+### 3. AI/ML Modules
+For each module, specify: problem, data sources, model architecture, features, training, outputs, integration
+- **Energy Optimization:** LSTM/Transformer for demand forecasting
+- **Waste Management:** Computer vision (YOLOv8) + route optimization (GNN)
+- **Green Space:** Satellite imagery segmentation (U-Net), heat island analysis, intervention recommendations
+- **NLP:** Intent classification, sentiment analysis, auto-ticketing (fine-tuned BERT)
+- **MLOps:** Infrastructure, tracking, monitoring, retraining cadence
+
+### 4. User Experience
+- Personas: Sustainability director, urban planner, waste manager, citizen
+- Journey maps (current vs. future state)
+- Dashboard descriptions (5 key screens)
+
+### 5. Implementation Roadmap
+- **Phase 1 (0-12 mos):** Pilot (200 sensors, MVP, 3 models) – criteria, deliverables, metrics, budget
+- **Phase 2 (13-24 mos):** City-wide scale (2,000+ sensors, full integration)
+- **Phase 3 (25-36 mos):** SaaS platform, marketplace, carbon credits
+- Risk mitigation: Technical, operational, political
+
+### 6. Business Model & Funding
+- Revenue: SaaS, services, carbon credits, data insights, grants
+- Cost structure and breakeven
+- Funding stages: Pre-seed ($500k), Seed ($3M), Series A ($15M)
+- ROI: Mid-sized city case ($2-5M investment, $1.5-4M annual savings, 2-3 year payback)
+
+### 7. Impact Assessment
+- Environmental: CO₂e reduction, energy savings, waste diversion
+- Economic: Job creation, healthcare savings, property values
+- Social: Environmental justice, public health, civic engagement
+- UN SDG alignment
+
+### 8. Ethics, Privacy & Governance
+- Ethical principles, algorithmic auditing, community oversight
+- Data privacy policies, consent, sharing limitations
+- Governance structure, incident response
+
+### 9. Appendices
+- Glossary
+- Sensor specifications table
+- Open source components
+- API endpoint examples
+- Sample data schema
+
+### 10. Bonus (Optional)
+- Competitive analysis (5 competitors)
+- Partnership strategy (10 partners)
+- Marketing launch plan
+- Open source strategy
+- Disaster resilience module
+
+---
+
+## FORMAT REQUIREMENTS
+
+- **Tone:** Professional, confident, evidence-based
+- **Structure:** Clear headers, tables where appropriate
+- **Visual descriptions:** Describe charts, maps, and UI mockups in text for designers to use
+- **Depth:** Comprehensive but concise
+
+---
+
+## OUTPUT INSTRUCTION
+
+Generate the complete documentation package with all sections above. Organize clearly and provide sufficient detail for stakeholders to understand both vision and execution.
