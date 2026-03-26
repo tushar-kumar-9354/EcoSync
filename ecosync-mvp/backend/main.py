@@ -8,11 +8,24 @@ from fastapi import FastAPI, Query, HTTPException, WebSocket, WebSocketDisconnec
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from backend.config import settings
-from backend.database import db
-from backend.models.report import CitizenReportCreate
-from backend.services.simulation_service import SimulationService
-from backend.services.prediction_service import PredictionService
+import sys
+import os
+# Support both local (python main.py from backend/) and Render (uvicorn backend.main:app)
+if os.path.basename(os.path.dirname(os.path.abspath(__file__))) == "backend":
+    # Running locally: python main.py from inside backend/ folder
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from config import settings
+    from database import db
+    from models.report import CitizenReportCreate
+    from services.simulation_service import SimulationService
+    from services.prediction_service import PredictionService
+else:
+    # Running on Render: uvicorn backend.main:app from ecosync-mvp/
+    from backend.config import settings
+    from backend.database import db
+    from backend.models.report import CitizenReportCreate
+    from backend.services.simulation_service import SimulationService
+    from backend.services.prediction_service import PredictionService
 
 # Initialize services
 simulation = SimulationService(db, settings.simulation_update_interval)
