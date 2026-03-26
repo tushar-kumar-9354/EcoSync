@@ -8,11 +8,11 @@ from fastapi import FastAPI, Query, HTTPException, WebSocket, WebSocketDisconnec
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
-from config import settings
-from database import db
-from models.report import CitizenReportCreate
-from services.simulation_service import SimulationService
-from services.prediction_service import PredictionService
+from backend.config import settings
+from backend.database import db
+from backend.models.report import CitizenReportCreate
+from backend.services.simulation_service import SimulationService
+from backend.services.prediction_service import PredictionService
 
 # Initialize services
 simulation = SimulationService(db, settings.simulation_update_interval)
