@@ -17,8 +17,8 @@ export function useWebSocket(onMessage: (msg: WebSocketMessage) => void, enabled
   const connect = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    const wsUrl = `${protocol}//${window.location.hostname}:8000/api/v1/ws`;
+    const wsBase = process.env.NEXT_PUBLIC_WS_URL || `ws://${window.location.hostname}:8000`;
+    const wsUrl = `${wsBase}/api/v1/ws`;
 
     try {
       wsRef.current = new WebSocket(wsUrl);
