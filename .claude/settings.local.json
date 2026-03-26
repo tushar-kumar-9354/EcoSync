@@ -46,7 +46,8 @@
       "Bash(rm -rf ecosync-mvp/)",
       "Bash(rm -rf backend frontend)",
       "Bash(mv ecosync-mvp/backend .)",
-      "Bash(mv ecosync-mvp/frontend .)"
+      "Bash(mv ecosync-mvp/frontend .)",
+      "Bash(timeout 5 python main.py)"
     ]
   }
 }
