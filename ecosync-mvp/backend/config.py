@@ -6,7 +6,7 @@ class Settings(BaseSettings):
     app_name: str = "EcoSync API"
     debug: bool = True
     api_v1_prefix: str = "/api/v1"
-    cors_origins: str = "http://localhost:3000,http://127.0.0.1:3000"
+    cors_origins: str = "http://localhost:3000,http://127.0.0.1:3000,https://eco-sync-5f1h.vercel.app"
     simulation_update_interval: int = 15  # seconds
 
     class Config:
