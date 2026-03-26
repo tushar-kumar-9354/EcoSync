@@ -43,7 +43,10 @@
       "Bash(winget list:*)",
       "Bash(cd:*)",
       "Bash(rm -rf simulations/)",
-      "Bash(rm -rf ecosync-mvp/)"
+      "Bash(rm -rf ecosync-mvp/)",
+      "Bash(rm -rf backend frontend)",
+      "Bash(mv ecosync-mvp/backend .)",
+      "Bash(mv ecosync-mvp/frontend .)"
     ]
   }
 }
