@@ -17,7 +17,7 @@ export function useWebSocket(onMessage: (msg: WebSocketMessage) => void, enabled
   const connect = useCallback(() => {
     if (typeof window === 'undefined') return;
 
-    const wsBase = process.env.NEXT_PUBLIC_WS_URL || `ws://${window.location.hostname}:8000`;
+    const wsBase = process.env.NEXT_PUBLIC_WS_URL || `wss://${process.env.NEXT_PUBLIC_API_URL?.replace('https://', '') || 'ecosync-o293.onrender.com'}`;
     const wsUrl = `${wsBase}/api/v1/ws`;
 
     try {

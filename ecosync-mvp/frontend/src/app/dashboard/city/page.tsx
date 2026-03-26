@@ -119,6 +119,17 @@ export default function CityDashboard() {
   const { data: overflowRisk } = useOverflowRisk();
   const [wsAlerts, setWsAlerts] = useState<any[]>([]);
 
+  useEffect(() => {
+    console.log('=== METRICS DATA ===', metrics);
+    console.log('=== ALERTS DATA ===', alertsData);
+    console.log('=== AIR QUALITY ===', aqData);
+    console.log('=== ALERT STATS ===', alertStats);
+    console.log('=== ENERGY FORECAST ===', energyForecast);
+    console.log('=== AQI FORECAST ===', aqiForecast);
+    console.log('=== OVERFLOW RISK ===', overflowRisk);
+    console.log('=== API URL ===', process.env.NEXT_PUBLIC_API_URL);
+  }, [metrics, alertsData, aqData, alertStats, energyForecast, aqiForecast, overflowRisk]);
+ 
   useWebSocket((msg) => {
     if (msg.type === 'alert') {
       setWsAlerts(prev => [msg.alert, ...prev].slice(0, 5));
