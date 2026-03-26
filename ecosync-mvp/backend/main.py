@@ -45,7 +45,7 @@ async def lifespan(app: FastAPI):
 
 import os
 
-_cors_origins = os.getenv("CORS_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000").split(",")
+_cors_origins = settings.get_cors_origins()
 
 app = FastAPI(
     title=settings.app_name,
