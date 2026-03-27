@@ -130,7 +130,15 @@ export default function CityDashboard() {
     console.log('AQI Forecast:', aqiForecast);
     console.log('Overflow Risk:', overflowRisk);
   }, [metrics, aqData, alertStats, alertsData, energyForecast, aqiForecast, overflowRisk]);
-
+  // Add this inside your existing useEffect
+  useEffect(() => {
+    console.log('=== METRICS DETAIL ===', metrics);
+    console.log('=== METRICS SUSTAINABILITY SCORE ===', metrics?.sustainability_score);
+    console.log('=== METRICS ENERGY ===', metrics?.energy);
+    console.log('=== METRICS WASTE ===', metrics?.waste);
+    console.log('=== METRICS AIR QUALITY ===', metrics?.air_quality);
+    console.log('=== METRICS ALERTS ===', metrics?.alerts);
+  }, [metrics]);
 
 
   useWebSocket((msg) => {
